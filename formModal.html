@@ -1,0 +1,22 @@
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">
+		{{ title }}
+	</h3>
+</div>
+<form name="formModal" ng-submit="save()">
+	<div class="modal-body" id="modal-body">
+		
+		<modal-directive ng-model="pessoas.fname" name="fname" label="First Name" type="fname" ng-disabled="disableText"> </modal-directive>
+
+		<modal-directive ng-model="pessoas.lname" name="lname" label="Last Name" type="text" ng-disabled="disableText"> </modal-directive>
+
+		<modal-directive ng-model="pessoas.age" name="age" label="Age" type="number" ng-disabled="disableText"> </modal-directive>
+
+		<modal-directive ng-model="pessoas.email" name="email" label="E-mail" type="email" ng-disabled="disableText"> </modal-directive>
+		
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" type="submit">{{ title }}</button>
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</form>
